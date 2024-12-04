@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Reseñas</title>
+</head>
+<body>
+    <h1>Lista de Reseñas</h1>
+    <ul>
+        {% for review in reviews %}
+            <li>{{ review.usuario.nombre }} dijo: "{{ review.contenido }}" para el libro "{{ review.libro.nombre }}"</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
